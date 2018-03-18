@@ -7,4 +7,5 @@
 	font-weight: bold;
 	font-family: helvetica, san-serif;
 	text-shadow: 3px 3px orange;
+	-webkit-text-stroke: 0.2px orange;
 }
