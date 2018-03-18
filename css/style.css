@@ -1,0 +1,75 @@
+body{
+	font-family: ariel, sans-serif;
+	font-size: 13pt;
+	margin-top:0px;
+	margin:0px;
+	background-color: #9AE4D5;
+}
+#topbar{
+	color: white;
+	width:100%;
+	height:90px;
+	background-color: #3C5064;
+}
+#container{
+	display: flex;
+	flex-direction: column;
+	width:80%;
+	margin:auto;
+}
+header{
+	height:100%;
+	width:80%;
+	margin: auto;	
+
+}
+header > a > h1{
+	width:250px;
+	height:90px;
+	font-size: 28pt;
+	line-height: 90px;
+	margin-top:0px;
+    font-family: 'Lobster', cursive;
+    color:white;
+    text-decoration: none;
+    -webkit-transition: color 0.5s, transform 0.5s; /* Safari */
+    transition: color 0.2s, transform 0.5s;
+    padding-left: 10px;
+}
+header > a{
+	text-decoration: none;
+}
+header > a > h1:hover{
+	color: orange;
+    -ms-transform: rotate(-3deg); /* IE 9 */
+    -webkit-transform: rotate(-3deg); /* Safari 3-8 */
+    transform: rotate(-3deg);
+}
+nav{
+	padding-right: 10px;
+	float:right;
+	text-align: right;
+	width:400px;
+	height:100%;
+	border-top:1px solid lightgrey;
+}
+nav > a{
+	line-height: 90px; /*same as blue bar*/
+	text-decoration: none;
+	color: white;
+	font-size: 12pt;
+	margin-left:40px;
+	/*fade color*/
+	-webkit-transition: color 0.2s; /* Safari */
+    transition: color 0.2s;
+}
+nav > a:hover{
+	color: orange;
+}
+footer{
+	width:100%;
+	min-height: 50px;
+	padding:10px;
+}
+
+
