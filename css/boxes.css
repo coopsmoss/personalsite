@@ -9,10 +9,8 @@
 	min-width: 270px;
 	min-height: 400px;
 	background-color:white;
-	/*border: 1px solid orange;*/
 	margin:5px;
 	color:#3C5064;
-
 }
 .box_media{
 	width:100%;
@@ -22,10 +20,12 @@
 }
 .box_content{
 	padding:10px;
+	position: absolute;
 }
 .box_content > h3{
 	margin:0px;
 }
+
 
 
 #circlejerk{
