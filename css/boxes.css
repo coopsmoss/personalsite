@@ -2,15 +2,20 @@
 	display: flex;
 	width:98%;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
+	justify-content: space-between;
   	padding: 1%;
 }
 .box{
-	min-width: 300px;
+	min-width: 150px;
 	min-height: 400px;
-	background-color:white;
+	background-color:#EAEAED;
 	margin:10px;
 	color:#3C5064;
+	-webkit-transition: transform 0.25s; /* Safari */
+    transition: transform 0.25s;
+}
+.box:hover{
+	 transform: scale(1.04,1.04);
 }
 .box_media{
 	width:100%;
@@ -20,14 +25,35 @@
 }
 .box_content{
 	padding:10px;
-
+	font-size: 12pt;
+	text-align: center;
 }
-.box_content > h3{
+.box_content > a > h3{
+	font-size: 20pt;
 	margin:0px;
+	
+}
+.box_content > ul{
+	margin:auto;
+	text-align: left;
+}
+.box_title{
+	color:#3C5064;
+	text-decoration: none;
+}
+.box_title:hover{
+	color:orange;
+}
+.box_content > a{
+	color:#3C5064;
+}
+.box_content > a:hover{
+	color:orange;
 }
 
 
 
-#circlejerk{
-	background-image: url("../images/cj.png");
-}
+#circlejerk{background-image: url("../images/cj.png");}
+#trump{background-image: url("../images/trump.png");}
+#gamut{background-image: url("../images/gamut.png");}
+#calc{background-image: url("../images/calc.png");}

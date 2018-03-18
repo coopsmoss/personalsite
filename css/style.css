@@ -14,12 +14,12 @@ body{
 #container{
 	display: flex;
 	flex-direction: column;
-	width:80%;
+	width:70%;
 	margin:auto;
 }
 header{
 	height:100%;
-	width:80%;
+	width:70%;
 	margin: auto;	
 
 }
@@ -51,7 +51,6 @@ nav{
 	text-align: right;
 	width:400px;
 	height:100%;
-	border-top:1px solid lightgrey;
 }
 nav > a{
 	line-height: 90px; /*same as blue bar*/
