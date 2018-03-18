@@ -6,10 +6,10 @@
   	padding: 1%;
 }
 .box{
-	min-width: 270px;
+	min-width: 300px;
 	min-height: 400px;
 	background-color:white;
-	margin:5px;
+	margin:10px;
 	color:#3C5064;
 }
 .box_media{
@@ -20,7 +20,7 @@
 }
 .box_content{
 	padding:10px;
-	position: absolute;
+
 }
 .box_content > h3{
 	margin:0px;
