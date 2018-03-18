@@ -12,11 +12,14 @@
 	margin:10px;
 	color:white;
 	-webkit-transition: transform 0.25s; /* Safari */
-    transition: transform 0.25s;
+    transition: transform 0.25s, border-color 0.2s;
     overflow: hidden;
+    border: 3px solid;
+    border-color: #9AE4D5;
 }
 .box:hover{
-	 transform: scale(1.04,1.04);
+	 transform: scale(1.03,1.03);
+	 border: 3px solid orange;
 }
 .box_media{
 	width:100%;
@@ -24,6 +27,7 @@
 	background-position: center;
 	background-size: cover;
 	z-index: 0;
+
 }
 .box_content{
 	z-index: 1;
