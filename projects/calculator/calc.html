@@ -1,0 +1,106 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Cocktail Calculator</title>
+    <link rel="stylesheet" href="css/calc_style.css">
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="css/select2.css" rel="stylesheet"/>
+    <script src="js/select2.js"></script>
+    <script>
+        $(document).ready(function() { $(".dropdown").select2(); });
+    </script>
+
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <header><h1>&#10168; Cocktail Calculator &nbsp;<div class="mirror">&#10168;</div>   </h1>    </header>
+<hr/>
+        <main>
+            <div id="units" class="centered bordered">
+                <h3>Select your Prefered Units:</h3><br />
+                <span id="oz" class="unit"> <button onclick="updateUnits(fluid_oz)"> US Fluid Ounces </button> </span>
+                <span id="ml" class="unit">  <button onclick="updateUnits(milli)"> Milliliters </button> </span>
+                <span id="or">or</span>
+            </div>
+            <div class="split"></div>
+
+            <div id="ingredients" class="bordered">
+                <h3>Add your Ingredients:</h3>
+                <br /><br />
+
+                <table id="ingredients_list">
+                    <tr>
+                        <th class="ra" id="ingredHeader"> Ingredient </th> <th id="mUnit" >oz</th> <th > Ethanol (%abv) </th> <th> Sugar (g/100ml) </th> <th> Acid (%) </th> <th>x</th>
+                    </tr>
+
+                    <tr>
+                        <td class="ra"> Initial Totals </td> <td class="ra" id="tot_meas">  </td>  <td class="ra" id="tot_al">  0.0% </td>  <td class="ra" id="tot_sug"> 0.0 </td> <td class="ra" id="tot_acid">0.0%</td> <td></td>
+                    </tr>
+                </table>
+
+                <br />
+
+                <button id="add" onclick="newIng(); recalculate();">Add Ingredient</button>
+
+            </div>
+            <div class="split"></div>
+
+            <div id="shake_stir" class="centered bordered">
+                <h3>Mixing Method:</h3>
+                <br /><br />
+
+                <select id = "mixing_method" class="animated" name="mixing_method" onchange="changedMix();">
+                    <option selected disabled> Mixing Method </option>
+                    <option value="0">Shaken</option>
+                    <option value="1">Shaken with Egg Whites</option>
+                    <option value="2">Built</option>
+                    <option value="3">Stirred</option>
+                    <option value="4">Carbonated</option>
+                </select>
+                <br /><br />
+                <h3>Mixing Instructions:</h3>
+                <br /><br />
+                <span id="mixing_instructions">~</span>
+
+            </div>
+            <div class="split"></div>
+
+            <div id="proportions" class="bordered">
+                <h3>Review of Proportions:</h3>
+                <br /><br />
+
+                <table id="prop_table">
+                    <tr><th> Attribute </th> <th colspan="2"> Results </th> <th colspan="2"> Expected Range </th></tr>
+                    <td colspan="3"></td><th> Low </th> <th> Hight </th></tr>
+                    <tr><td> Dilution from Mixing (%) </td>  <td id="r11" class="ra"> </td> <td id="r21"  class="ca"> </td> <td id="r31" class="ra"> </td> <td id="r41" class="ra"> </td></tr>
+                    <tr><td> Final Volume (oz/ml)</td>       <td id="r12" class="ra"> </td> <td id="r22"  class="ca"> </td> <td id="r32" class="ra"> </td> <td id="r42" class="ra"> </td></tr>
+                    <tr><td> Ethanol (%abv)</td>             <td id="r13" class="ra"> </td> <td id="r23"  class="ca"> </td> <td id="r33" class="ra"> </td> <td id="r43" class="ra"> </td></tr>
+                    <tr><td> Sugar (g/100ml)</td>            <td id="r14" class="ra"> </td> <td id="r24"  class="ca"> </td> <td id="r34" class="ra"> </td> <td id="r44" class="ra"> </td></tr>
+                    <tr><td> Acid (%)</td>                   <td id="r15" class="ra"> </td> <td id="r25"  class="ca"> </td> <td id="r35" class="ra"> </td> <td id="r45" class="ra"> </td></tr>
+                </table>
+
+
+            </div>
+            <div class="split"></div>
+            <br />
+
+        </main>
+        <br /><br /><br />
+        <footer></footer>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/calculator.js"></script>
+
+    <script src="js/init.js"></script>
+
+</body>
+
+
+</html>

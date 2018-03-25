@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	 <meta http-equiv="content-type" content="image/svg+xml; charset=utf-8" />
+     <meta charset="UTF-8">
+     <script src="svge.js"></script>
+     <style>
+     	body{font-family:sans-serif;}
+     </style>
+</head>
+
+<body>
+  <h2> Tests:</h2>
+
+  Rectangle Text - uses variables and javascript functions
+  <br/>
+  <object id="svg1" data="rect test.svg" type="image/svg+xml"></object>
+  <script> processSVGE("svg1"); </script>
+  <br/>
+  
+  Text Text - uses variables
+  <br/>
+  <object id="svg2" data="text test.svg" type="image/svg+xml"></object>
+  <script> processSVGE("svg2"); </script>
+  <br/>
+  
+  Centered Text - uses variables and embedded JS
+  <br/>
+  <object id="svg3" data="centered test.svg" type="image/svg+xml" ></object>
+  <script> processSVGE("svg3"); </script>
+  <br/>
+  
+  Cirlce Text - uses variables and embedded JS in variable decleration, and also trig
+  <br/>
+  <object id="svg4" data="circle test.svg" type="image/svg+xml" ></object>
+  <script> processSVGE("svg4"); </script>
+  
+</body>
+</html>

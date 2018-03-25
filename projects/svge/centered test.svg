@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
+
+<svg version="1.1" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="300">
+
+	<var name="X" value="30"/>
+	<var name="Y" value="20"/>
+	<var name="W" value="300"/>
+	<var name="H" value="150"/>
+
+	<rect x="X" y="Y" width="W" height="H" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
+
+	<rect x="X+W/2 - W/4" y="Y+H/2 - H/4" width="W/2" height="H/2" style="fill:rgb(255,0,0);stroke-width:3;stroke:rgb(0,0,0)"/>
+
+
+
+</svg>

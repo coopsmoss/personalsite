@@ -1,0 +1,265 @@
+
+#gamut{
+    width:800px;
+    height:600px;
+    background-color:white;
+}
+
+#right_menu{
+    float:right;
+    height: 100%;
+    width: 187px;
+    background-color:white;
+}
+
+#left_canvas{
+    float:left;
+    height: 100%;
+    width: 600px;
+    background-color:white;
+}
+
+
+#gamut_title{
+    width:187px;
+    height:37px;
+    background-color: black;
+    background-image: url(../images/logo.png);
+}
+
+#colour_pattern{
+    width:100%;
+    height:84px;
+    background-color:#f2f2f2;
+    margin-bottom: 5px;
+    padding-top:10px;
+}
+
+#sliders{
+    padding-top:25px;
+    //padding-bottom:15px;
+    width:100%;
+    height:80px;
+    background-color:#f2f2f2;
+    margin-bottom: 5px;
+}
+
+#print_div{
+    width:100%;
+    background-color:#f2f2f2;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+
+
+
+#shape_buttons{
+    width:100%;
+    height:140px;
+    padding-top:15px;
+    background-color:#f2f2f2;
+    //padding-bottom: 15px;
+    margin-bottom:5px;
+}
+
+#custom_mask{
+    width:100%;
+    height:110px;
+    padding-top:15px;
+    padding-bottom:5px;
+    background-color:#f2f2f2;
+    margin-bottom: 5px;
+}
+
+#darkness_slider{
+    background-image: url(../images/white_black.png);
+    background-size: 157px;
+}
+
+#colour_slider{
+    background-image: url(../images/picker.png);
+    background-size: 157px 20px;
+
+}
+
+.fade{
+    overflow: hidden;
+    width:157px;
+    height:20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-repeat: repeat-y;
+    background-size: 157px;
+    border-bottom-right-radius:10px;
+    border-bottom-left-radius:10px;
+    border-style: solid;
+    border-top-style: none;
+    border-width: 2px;
+    border-color: lightgrey;
+
+}
+
+.sliding{
+    padding-top:15px;
+    width:155px;
+    margin:0px;
+    z-index: 10000000;
+    position: relative;
+    top:-15px;
+}
+
+#full_screen{
+    position: relative;
+    bottom:600px;
+    left:325px;
+    background-image: url(../images/full.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px 25px;
+    width:40px;
+    height:40px;
+}
+
+#tell_friend{
+    position: relative;
+    bottom:45px;
+    left:220px;
+}
+
+#home_link{
+    position: relative;
+    top:6px;
+    left:6px;
+}
+
+td{
+    padding-left:10px;
+    padding-bottom:0px;
+    width:25%;
+}
+#buttons{
+    width:157px;
+    margin-left:15px;
+}
+
+#mask_can{
+    display: none;
+    width:0px;
+    height:0px;
+}
+
+#cust{
+    width:100%;
+
+}
+
+#cut_can{
+    display: none;
+    width:0px;
+    height:0px;
+}
+
+
+.c_button{
+    width:30px;
+    height:30px;
+    text-align: center;
+    background-color: white;
+    margin-right:9px;
+    float:left;
+}
+
+#scissors{
+    background-image: url(../images/scis.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px;
+    margin-left: 20px;
+}
+
+.pattern_side{
+    width:50%;
+    font-family: sans-serif;
+    float:left;
+    text-align:center;
+    font-size:10pt;
+    color:grey;
+}
+
+.selected_button{
+    background-color: grey;
+}
+
+.hideme{
+    display: none;
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: relative; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    bottom: 600px;
+    width: 800px; /* Full width */
+    height: 600px; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    margin-top:50px;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 10px;
+    font-family: sans-serif;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+
+
+}
+
+.helpme{
+    float:right;
+    position: relative;
+    right:3px;
+    //bottom:5px;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    background-color: rgba(0,0,0,0.2);
+}
+
+#myBtn1{
+    bottom:8px;
+}
+
+#myBtn2{
+    bottom:5px;
+}
+
+#myBtn3{
+    bottom:15px;
+}
+
+#myBtn4{
+    //bottom:10px;
+}

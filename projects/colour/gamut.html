@@ -1,0 +1,254 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Gamut</title>
+</head>
+
+<body style="background-color:lightgrey;">
+
+ <div id="gamut"style="width:800px;margin-right:auto;margin-left:auto">
+
+
+
+
+ <link rel="stylesheet" type="text/css" href="css/mask.css">
+     <div id="left_canvas">
+         <input id="home_link" type="button" onclick="openInNewTab('http://www.livepaintinglessons.com/colour.php');" value="www.livepaintinglessons.com" />
+        <canvas id="can" width="600" height="600">
+        </canvas>
+
+
+        <canvas id="mask_can" width="600" height="600">
+        </canvas>
+        <canvas id="cut_can" width="600" height="600">
+        </canvas>
+    </div>
+
+
+    <div id="right_menu">
+        <div id="gamut_title">
+
+        </div>
+        <div id="colour_pattern">
+
+            <div class="pattern_side">
+                <input type="image" onclick="switch_pattern(0);" src="images/std_icon.png"/>
+                Standard
+            </div>
+            <div class="pattern_side">
+                <input type="image" onclick="switch_pattern(1);" src="images/y_icon.png"/>
+                Yurmby
+            </div>
+            <input class="helpme"type="button" id="myBtn1" value="?" onclick="helpme(0);"/>
+        </div>
+        <div id="sliders">
+                <div class="fade" id="darkness_slider">
+                    <input type="range" name="points" id="d_slider"class="sliding"  value="50" min="0" max="100" onchange="update_sliders();">
+                </div>
+                <br />
+                <div class="fade" id="colour_slider">
+                    <input type="range" name="points" id="c_slider" class="sliding"  value="0" min="0" max="99" onchange="update_sliders();">
+                </div>
+                <input class="helpme"type="button" id="myBtn2" value="?" onclick="helpme(1);"/>
+        </div>
+        <div id="shape_buttons">
+            <table id="buttons">
+                <tr>
+                    <td>
+                        <input type="image" class="mask_button" src="images/1.png" alt="missing" onclick="selectMask(1);"/>
+                    </td>
+                    <td>
+                        <input type="image" class="mask_button" src="images/2.png" alt="missing" onclick="selectMask(2);"/>
+                    </td>
+                    <td>
+                        <input type="image" class="mask_button" src="images/3.png" alt="missing" onclick="selectMask(3);"/>
+                    </td>
+                    <td>
+                        <input type="image" class="mask_button" src="images/4.png" alt="missing" onclick="selectMask(4);"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="image" class="mask_button" src="images/5.png" alt="missing" onclick="selectMask(5);"/>
+                    </td>
+                    <td>
+                        <input type="image" class="mask_button" src="images/6.png" alt="missing" onclick="selectMask(6);"/>
+                    </td>
+                    <td>
+                        <input type="image" class="mask_button" src="images/7.png" alt="missing" onclick="selectMask(7);"/>
+                    </td>
+                    <td>
+                        <input type="image" class="mask_button" src="images/8.png" alt="missing" onclick="selectMask(8);"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="image" class="mask_button" src="images/9.png" alt="missing" onclick="selectMask(9);"/>
+                    </td>
+                    <td>
+                        <input type="image" class="mask_button" src="images/10.png" alt="missing" onclick="selectMask(10);"/>
+                    </td>
+                    <td>
+                        <input type="image" class="mask_button" src="images/11.png" alt="missing" onclick="selectMask(11);"/>
+                    </td>
+                    <td>
+                        <input type="image" class="mask_button" src="images/12.png" alt="missing" onclick="selectMask(12);"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="image" class="mask_button" src="images/13.png" alt="missing" onclick="selectMask(13);"/>
+                    </td>
+                    <td>
+                        <input type="image" class="mask_button" src="images/14.png" alt="missing" onclick="selectMask(14);"/>
+                    </td>
+                    <td>
+                        <input type="image" class="mask_button" src="images/15.png" alt="missing" onclick="selectMask(15);"/>
+                    </td>
+                    <td>
+                        <input type="image" class="mask_button" src="images/16.png" alt="missing" onclick="selectMask(16);"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="image" class="mask_button" src="images/17.png" alt="missing" onclick="selectMask(17);"/>
+                    </td>
+                    <td>
+                        <input type="image" class="mask_button" src="images/18.png" alt="missing" onclick="selectMask(18);"/>
+                    </td>
+                    <td>
+                        <input type="image" class="mask_button" src="images/19.png" alt="missing" onclick="selectMask(19);"/>
+                    </td>
+                    <td>
+                        <input type="image" class="mask_button" src="images/20.png" alt="missing" onclick="selectMask(20);"/>
+                    </td>
+                </tr>
+            </table>
+            <input class="helpme"type="button" id="myBtn3" value="?" onclick="helpme(2);"/>
+        </div>
+        <div id="custom_mask">
+            <button id="scissors" class="c_button" onclick="draw_custom();"></button>
+            <button id="plus" class="c_button" onclick="save_pat();">+</button>
+            <button id="minus" class="c_button" onclick="del_pat();">-</button>
+            <input class="helpme"type="button" id="myBtn4" value="?" onclick="helpme(3);"/>
+            <table id="cust">
+                <tr>
+                    <td >
+                        <input type="image" src="" id="mini_icon_0" onclick="cmask(0)" alt="">
+                    </td>
+                    <td >
+                        <input type="image" src="" id="mini_icon_1" onclick="cmask(1)"alt="">
+                    </td>
+                    <td >
+                        <input type="image" src="" id="mini_icon_2" onclick="cmask(2)"alt="">
+                    </td>
+                    <td >
+                        <input type="image" src="" id="mini_icon_3" onclick="cmask(3)" alt="">
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <input type="image" src="" id="mini_icon_4" onclick="cmask(4)" alt="">
+                    </td>
+                    <td >
+                        <input type="image" src="" id="mini_icon_5" onclick="cmask(5)" alt="">
+                    </td>
+                    <td >
+                        <input type="image" src="" id="mini_icon_6" onclick="cmask(6)" alt="">
+                    </td>
+                    <td >
+                        <input type="image" src="" id="mini_icon_7" onclick="cmask(7)" alt="">
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <div id="print_div">
+            <input type="button" onclick="printme();" value="Print"/>
+        </div>
+    </div>
+
+    <div id="myModal1" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="exitM(0);">&times;</span>
+        <h4>Click and Drag the color wheel to rotate it.</h4>
+        <h4>STANDARD Color Wheel</h4>
+        <p>
+            Yellow, Yellow Green, Green, Blue Green, Blue, Blue Violet, Violet, Red Violet, Red, Red Orange, Orange, Yellow Orange.
+        </p>
+
+        <h4>YURMBY Color Wheel</h4>
+        <p>
+            Yellow, green cyan, blue, magenta and red (and all their intermediaries). This color wheel combines the RBG with CMY color wheel and is a truer representation of how we perceive color. Yurmby color wheel was created by Tobey Sanford www.greatpix.com/tobey/biography.html
+        </p>
+      </div>
+
+    </div>
+
+    <div id="myModal2" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="exitM(1);">&times;</span>
+        <h4>Value</h4>
+        <p>
+            'The lightness or darkness of a color - as if seen through a black and white camera.'
+        </p>
+        <p>
+            Change the Value scale by moving the slider
+        </p>
+        <h4>Chroma</h4>
+        <p>
+            'The amount of gray in the color. Also known as saturation, intensity and purity.'
+        </p>
+        <p>
+            Change the overall chroma by moving the slider
+        </p>
+      </div>
+
+    </div>
+
+    <div id="myModal3" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="exitM(2);">&times;</span>
+        <h4>Preset Masks</h4>
+        <p>
+            Click a small mask to try it.
+        </p>
+        <p>
+            Click and Drag the big mask to move it.
+        </p>
+      </div>
+
+    </div>
+
+    <div id="myModal4" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="exitM(3);">&times;</span>
+        <h4>Freeform Mask</h4>
+        Use the scissors to cut your own mask.
+        Use the + to save your mask
+        Use the - to delete your mask
+        <br />
+        <h4>Printing</h4>
+        Printed colors appear best on photopaper.
+      </div>
+
+    </div>
+
+    <div id="myModal5" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="exitM(4);">&times;</span>
+        <p>5</p>
+      </div>
+
+    </div>
+
+</div>
+<script src="js/masks.js"></script>
+<script src="js/gamut.js"></script>
+ 
+</body>
+</html>
+
