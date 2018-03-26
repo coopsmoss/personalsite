@@ -46,7 +46,7 @@ header > a > h1:hover{
     transform: rotate(-3deg);
 }
 nav{
-	padding-right: 10px;
+	padding-right: 40px;
 	float:right;
 	text-align: right;
 	width:400px;
