@@ -6,7 +6,7 @@
 	<var name="size" value="22"/>
 
 	<text x="0" y="20" font-size="size" fill="red">
-		CPSC 311
+		SVGE
 	</text>
 
 	<text x="120" y="20" font-size="size" fill="blue">

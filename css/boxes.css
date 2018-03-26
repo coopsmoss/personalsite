@@ -5,7 +5,7 @@
 }
 .box{
 	min-width: 150px;
-	height: 410px;
+	height: 430px;
 	background-color:#344e4a;
 	margin:10px;
 	color:white;
@@ -58,10 +58,10 @@
 .box_title:hover{
 	color:orange;
 }
-.box_content > a{
+.box_content  a{
 	color:white;
 }
-.box_content > a:hover{
+.box_content  a:hover{
 	color:orange;
 }
 .myVideo {
@@ -80,3 +80,4 @@ video{
 #trump{background-image: url("../images/trump.png");}
 #gamut{background-image: url("../images/gamut.png");}
 #calc{background-image: url("../images/calc.png");}
+#svge{background-image: url("../images/svge.png");}

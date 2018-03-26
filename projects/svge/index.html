@@ -14,24 +14,58 @@
   <h2> Tests:</h2>
 
   Rectangle Text - uses variables and javascript functions
+  <xmp>
+  <var name="_var1" value="150"/>
+  <var name="_var2" value="250"/>
+  <rect width="Math.random()*50+_var2" height="_var1+20" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+  </xmp>
   <br/>
   <object id="svg1" data="rect test.svg" type="image/svg+xml"></object>
   <script> processSVGE("svg1"); </script>
   <br/>
+
   
   Text Text - uses variables
+  <xmp>
+  <var name="size" value="22"/>
+  <text x="0" y="20" font-size="size" fill="red">SVGE</text>
+  <text x="120" y="20" font-size="size" fill="blue">is fun!</text>
+  </xmp>
   <br/>
   <object id="svg2" data="text test.svg" type="image/svg+xml"></object>
   <script> processSVGE("svg2"); </script>
   <br/>
   
   Centered Text - uses variables and embedded JS
+  <xmp>
+  <var name="X" value="30"/>
+  <var name="Y" value="20"/>
+  <var name="W" value="300"/>
+  <var name="H" value="150"/>
+  <rect x="X" y="Y" width="W" height="H" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
+  <rect x="X+W/2 - W/4" y="Y+H/2 - H/4" width="W/2" height="H/2" style="fill:rgb(255,0,0);stroke-width:3;stroke:rgb(0,0,0)"/>
+  </xmp>
   <br/>
   <object id="svg3" data="centered test.svg" type="image/svg+xml" ></object>
   <script> processSVGE("svg3"); </script>
   <br/>
   
   Cirlce Text - uses variables and embedded JS in variable decleration, and also trig
+  <xmp>
+  <var name="X" value="100"/>
+  <var name="Y" value="100"/>
+  <var name="R" value="30 + Math.random()*50"/>
+  <var name="theta" value="-60"/>
+
+  <circle cx="X" cy="Y" r="R" stroke="black" stroke-width="3" fill="red" />
+
+  <line
+     x1="X"
+     y1="Y"
+     x2="X + R * Math.cos(theta)"
+     y2="Y + R * Math.sin(theta)"
+     style="stroke:rgb(0,0,0);stroke-width:2" />
+  </xmp>
   <br/>
   <object id="svg4" data="circle test.svg" type="image/svg+xml" ></object>
   <script> processSVGE("svg4"); </script>
